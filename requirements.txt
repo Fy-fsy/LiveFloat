@@ -1,0 +1,12 @@
+# Runtime dependencies for LiveFloat (浮译).
+# Install with:  .venv\Scripts\python.exe -m pip install -r requirements.txt
+# Chinese mirror: append  -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+PySide6-Essentials>=6.8,<7
+faster-whisper>=1.1,<2
+pyaudiowpatch>=0.2.14
+onnxruntime>=1.18,<2
+soxr>=0.4
+requests>=2.32
+numpy>=1.26,<3
+sentencepiece>=0.2,<0.3
