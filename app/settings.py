@@ -626,8 +626,8 @@ class SettingsWindow(QWidget):
         github.setTextFormat(Qt.RichText)
         github.setText(
             tr(
-                '项目仓库：<a href="https://github.com/yourname/LiveFloat">https://github.com/yourname/LiveFloat</a>（待创建）',
-                'Repository: <a href="https://github.com/yourname/LiveFloat">https://github.com/yourname/LiveFloat</a> (to be created)',
+                '项目仓库：<a href="https://github.com/Fy-fsy/LiveFloat">https://github.com/Fy-fsy/LiveFloat</a>',
+                'Repository: <a href="https://github.com/Fy-fsy/LiveFloat">https://github.com/Fy-fsy/LiveFloat</a>',
             )
         )
         lay.addWidget(github)

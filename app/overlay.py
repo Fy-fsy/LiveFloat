@@ -303,6 +303,11 @@ class SubtitleOverlay(QWidget):
         self._rebuild()
 
     def _rebuild(self) -> None:
+        # Capture the user's scroll intent BEFORE the clear/re-add clobbers it.
+        bar = self.scroll.verticalScrollBar()
+        was_pinned = self._pinned_to_bottom
+        prev_value = bar.value()
+
         while self.history_layout.count():
             item = self.history_layout.takeAt(0)
             w = item.widget()
@@ -348,8 +353,12 @@ class SubtitleOverlay(QWidget):
                 self.history_layout.addWidget(row)
 
         self._update_size()
-        if self._pinned_to_bottom:
+        if was_pinned:
+            self._pinned_to_bottom = True
             QTimer.singleShot(0, self._scroll_to_bottom)
+        else:
+            self._pinned_to_bottom = False
+            QTimer.singleShot(0, lambda: bar.setValue(prev_value))
 
     def _update_size(self) -> None:
         self.setFixedWidth(self.cfg.overlay_width)
