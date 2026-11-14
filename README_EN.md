@@ -74,7 +74,7 @@ Turn the **foreign-language audio from web pages, videos, and meetings** into re
   I don't have the money to buy a code-signing certificate; without one this warning appears, but after you allow it once it won't show again.
 4. Is there a virus?
    No. You can use AI to inspect my source code.
-If you encounter problems while using it, you can send me an Issue.
+5. If you encounter problems while using it, you can send me an Issue.
 ---
 
 ## Privacy & disclaimer
